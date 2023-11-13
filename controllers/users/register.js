@@ -1,12 +1,9 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
 
 const register = async (req, res) => {
   const usersModel = mongoose.model("users");
-
   const { email, name, password, confirmedPW, balence } = req.body;
-
   //Validations
 
   if (!email) throw "No email";

@@ -29,7 +29,6 @@ app.use("/api/users", userRoutes);
 app.use("/api/transactions", transactionRoutes);
 
 //end of all routes
-
 app.use(errorHandler); // middleware
 
 const port = process.env.PORT || 8000;

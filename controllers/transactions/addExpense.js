@@ -15,7 +15,7 @@ const addExpense = async (req, res) => {
     throw "Amount needs to be number";
 
   await transctionsModel.create({
-    user_id: req.user._id,
+    user_id: req.user.id,
     amount,
     remarks,
     transaction: "Expense",
@@ -24,7 +24,7 @@ const addExpense = async (req, res) => {
   await usersModel.updateOne(
     //this one too handler updating the users balence with the added income. practicing working with multiple
     {
-      _id: req.user._id,
+      _id: req.user.id,
     },
     {
       $inc: {

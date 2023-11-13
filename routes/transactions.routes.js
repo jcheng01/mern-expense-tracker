@@ -14,6 +14,6 @@ transactionRoutes.use(auth); /// every route after this middleware willbe contro
 //Protected routes
 transactionRoutes.post("/addIncome", addIncome);
 transactionRoutes.post("/addExpense", addExpense);
-transactionRoutes.get("/transactions", getTransactions);
+transactionRoutes.get("/", getTransactions);
 
 module.exports = transactionRoutes;
